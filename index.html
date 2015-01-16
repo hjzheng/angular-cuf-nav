@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CUF Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="./css/angular-cuf-nav.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="angular-cuf-nav.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body ng-app="test">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav class="navbar navbar-inverse platform-brand-area" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <a class="navbar-brand" href="https://github.com/hjzheng/angular-cuf-nav">Angular CUF Navigation</a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown">Admin <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">Help <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="https://github.com/hjzheng">hjzheng GitHub</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/hjzheng/angular-cuf-nav">About</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <nav class="navbar navbar-default platform-nav-area" role="navigation">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse platform-navbar" id="navbar">
+                            <cuf-nav triggered-event="click">
+                                <cuf-nav-item label="Example" href="#example" has-children="true">
+                                    <cuf-nav-child-item label="example1" href="#example1"></cuf-nav-child-item>
+                                    <cuf-nav-child-item label="exmaple2" href="#example2"></cuf-nav-child-item>
+                                    <cuf-nav-child-item label="example3" href="#example3"></cuf-nav-child-item>
+                                    <cuf-nav-child-item label="example4" href="#example4"></cuf-nav-child-item>
+                                </cuf-nav-item>
+                                <cuf-nav-item label="Usage" href="#usage">
+                                </cuf-nav-item>
+                                <cuf-nav-item label="API" href="#api">
+                                </cuf-nav-item>
+                            </cuf-nav>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ui-view class="col-xs-12"></div>
+        </div>
+    </div>
+</body>
+
+</html>

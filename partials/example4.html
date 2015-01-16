@@ -1,0 +1,64 @@
+<h2>通过数据动态生成导航菜单</h2>
+<div class="nav">
+	<cuf-nav triggered-event="click">
+	    <cuf-nav-item ng-repeat="item in navData" href="{{item.href}}" label="{{item.name}}" 
+	                       has-children="{{item.children && item.children.length !== 0}}">
+				<cuf-nav-child-item ng-repeat="itemChild in item.children" href="{{itemChild.href}}" label="{{itemChild.name}}"></cuf-nav-child-item>
+	    </cuf-nav-item>
+	</cuf-nav>
+</div>
+
+<h2>Code</h2>
+<pre>
+  <code>
+&lt;cuf-nav triggered-event=&quot;click&quot;&gt;
+    &lt;cuf-nav-item ng-repeat=&quot;item in navData&quot; href=&quot;{{item.href}}&quot; label=&quot;{{item.name}}&quot; 
+                       has-children=&quot;{{item.children &amp;&amp; item.children.length !== 0}}&quot;&gt;
+            &lt;cuf-nav-child-item ng-repeat=&quot;itemChild in item.children&quot; href=&quot;{{itemChild.href}}&quot; label=&quot;{{itemChild.name}}&quot;&gt;&lt;/cuf-nav-child-item&gt;
+    &lt;/cuf-nav-item&gt;
+&lt;/cuf-nav&gt;
+  </code>
+</pre>  
+
+<h2>JSON 数据</h2>
+<pre>
+	<code class="json">
+[{
+    "name": "first-1",
+    "href": "#page1"
+}, {
+    "name": "first-2",
+    "href": "#page2"
+}, {
+    "name": "first-3",
+    "href": "#",
+    "children": [{
+        "name": "second-1",
+        "href": "#page1"
+    }, {
+        "name": "second-2",
+        "href": "#page2"
+    }, {
+        "name": "second-3",
+        "href": "#"
+    }]
+}, {
+    "name": "first-4",
+    "href": "#",
+    "children": [{
+        "name": "second-4",
+        "href": "#"
+    }, {
+        "name": "second-5",
+        "href": "#",
+        "children": [{
+            "name": "third-1",
+            "href": "#"
+        }]
+    }, {
+        "name": "second-6",
+        "href": "#"
+    }]
+}]		
+	</code>
+</pre>

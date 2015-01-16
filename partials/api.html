@@ -1,0 +1,89 @@
+<h2>API</h2>
+<h3>指令</h3>
+<dl class="dl-horizontal">
+  <dt>cufNav</dt>
+  <dd>最上层标签</dd>
+  <dt>cufNavItem</dt>
+  <dd>cufNav的直接子标签</dd>
+  <dt>cufNavChildItem</dt>
+  <dd>最后一层标签,可以自己相互嵌套，达到多级菜单效果</dd>
+</dl>
+<h3>cufNav</h3>
+<div class="table-responsive">
+  <table class="table">
+  	<tr>
+  		<th>参数</th>
+  		<th>值</th>
+  		<th>作用</th>
+  	</tr>
+    <tr>
+    	<td>triggered-event</td>
+    	<td>click 或者 mouseover 默认click</td>
+    	<td>决定导航菜单以什么事件触发展开</td>
+    </tr>
+  </table>
+</div>
+<p>
+	
+</p>
+<h3>cufNavItem</h3>
+<div class="table-responsive">
+  <table class="table">
+  	<tr>
+  		<th>参数</th>
+  		<th>值</th>
+  		<th>作用</th>
+  	</tr>
+    <tr>
+    	<td>label</td>
+    	<td>字符串</td>
+    	<td>决定菜单显示, 它的值必须唯一</td>
+    </tr>
+    <tr>
+    	<td>href</td>
+    	<td>字符串</td>
+    	<td>一般结合ngRoute或ui.router去使用</td>
+    </tr>
+    <tr>
+    	<td>triggered-event</td>
+    	<td>click 或者 mouseover 默认会使用cufNav的triggered-event值</td>
+    	<td>决定导航子菜单以什么事件触发展开</td>
+    </tr>
+    <tr>
+    	<td>has-children</td>
+    	<td>字符串,任意字符串,表示真</td>
+    	<td>如果cufNavItem下需要包含cufNavChildItem标签，就必须配置该属性，反之不要配</td>
+    </tr>
+  </table>
+</div>
+<p>
+
+</p>
+<h3>cufNavChildItem</h3>
+<div class="table-responsive">
+  <table class="table">
+  	<tr>
+  		<th>参数</th>
+  		<th>值</th>
+  		<th>作用</th>
+  	</tr>
+    <tr>
+    	<td>label</td>
+    	<td>字符串</td>
+    	<td>决定菜单显示, 它的值必须唯一</td>
+    </tr>
+    <tr>
+    	<td>href</td>
+    	<td>字符串</td>
+    	<td>一般结合ngRoute或ui.router去使用</td>
+    </tr>
+    <tr>
+    	<td>has-children</td>
+    	<td>字符串,任意字符串,表示真</td>
+    	<td>如果cufNavChildItem下需要嵌套cufNavChildItem标签，就必须配置该属性，反之不要配</td>
+    </tr>
+  </table>
+</div>
+<p>
+	
+</p>
