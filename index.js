@@ -26,6 +26,10 @@ angular.module('test', ['ui.router','ngResource', 'cuf'])
       templateUrl: "partials/example4.html",
       controller: 'navCtrl'
     })
+    .state('example5', {
+      url: '/example5',
+      templateUrl: "partials/example5.html"
+    })
     .state('usage', {
       url: '/usage',
       templateUrl: "partials/usage.html"

@@ -99,6 +99,8 @@ angular.module('cuf', []).directive('cufNav', function($window){
 
         if(!$scope.triggeredEvent){
           this.triggeredEvent = $scope.$parent.$parent.triggeredEvent;
+        }else{
+          this.triggeredEvent = $scope.triggeredEvent;
         }
 
         var childItems = $scope.childItems = {};

@@ -1,0 +1,57 @@
+<h2>第一级菜单click事件触发，第二级以及后续使用mouseover触发</h2>
+<div class="nav">
+	<cuf-nav triggered-event="click">
+	    <cuf-nav-item label="item-1" href="#page"></cuf-nav-item>
+	    <cuf-nav-item label="item-2" href="#page1" has-children="true" triggered-event="mouseover">
+	        <cuf-nav-child-item label="item-2-1" href="#page2"></cuf-nav-child-item>
+	        <cuf-nav-child-item label="item-2-2" href="#page" has-children="true">
+	            <cuf-nav-child-item label="item-2-2-1" href="#page"></cuf-nav-child-item>
+	            <cuf-nav-child-item label="item-2-2-2" href="#page" has-children="true">
+					<cuf-nav-child-item label="item-2-2-2-1" href="#page"></cuf-nav-child-item>
+	            </cuf-nav-child-item>
+	            <cuf-nav-child-item label="item-2-2-3" href="#page"  has-children="true">
+	                <cuf-nav-child-item label="item-2-2-3-1" href="#page"  has-children="true">
+						<cuf-nav-child-item label="item-2-2-3-1-1" href="#page"></cuf-nav-child-item>
+	                </cuf-nav-child-item>
+	            </cuf-nav-child-item>
+	        </cuf-nav-child-item>
+	    </cuf-nav-item>
+	    <cuf-nav-item label="item-3" href="#page1" has-children="true" triggered-event="mouseover">
+	        <cuf-nav-child-item label="item-3-1" href="#page2" has-children="true">
+	            <cuf-nav-child-item label="item-3-1-1" href="#page3"></cuf-nav-child-item>
+	        </cuf-nav-child-item>
+	        <cuf-nav-child-item label="item-3-2" href="#page"></cuf-nav-child-item>
+	    </cuf-nav-item>
+	</cuf-nav>
+</div>
+
+
+
+<h2>Code</h2>
+<pre>
+  <code>
+&lt;cuf-nav triggered-event=&quot;click&quot;&gt;
+    &lt;cuf-nav-item label=&quot;item-1&quot; href=&quot;#page&quot;&gt;&lt;/cuf-nav-item&gt;
+    &lt;cuf-nav-item label=&quot;item-2&quot; href=&quot;#page1&quot; has-children=&quot;true&quot; triggered-event=&quot;mouseover&quot;&gt;
+        &lt;cuf-nav-child-item label=&quot;item-2-1&quot; href=&quot;#page2&quot;&gt;&lt;/cuf-nav-child-item&gt;
+        &lt;cuf-nav-child-item label=&quot;item-2-2&quot; href=&quot;#page&quot; has-children=&quot;true&quot;&gt;
+            &lt;cuf-nav-child-item label=&quot;item-2-2-1&quot; href=&quot;#page&quot;&gt;&lt;/cuf-nav-child-item&gt;
+            &lt;cuf-nav-child-item label=&quot;item-2-2-2&quot; href=&quot;#page&quot; has-children=&quot;true&quot;&gt;
+				&lt;cuf-nav-child-item label=&quot;item-2-2-2-1&quot; href=&quot;#page&quot;&gt;&lt;/cuf-nav-child-item&gt;
+            &lt;/cuf-nav-child-item&gt;
+            &lt;cuf-nav-child-item label=&quot;item-2-2-3&quot; href=&quot;#page&quot;  has-children=&quot;true&quot;&gt;
+                &lt;cuf-nav-child-item label=&quot;item-2-2-3-1&quot; href=&quot;#page&quot;  has-children=&quot;true&quot;&gt;
+					&lt;cuf-nav-child-item label=&quot;item-2-2-3-1-1&quot; href=&quot;#page&quot;&gt;&lt;/cuf-nav-child-item&gt;
+                &lt;/cuf-nav-child-item&gt;
+            &lt;/cuf-nav-child-item&gt;
+        &lt;/cuf-nav-child-item&gt;
+    &lt;/cuf-nav-item&gt;
+    &lt;cuf-nav-item label=&quot;item-3&quot; href=&quot;#page1&quot; has-children=&quot;true&quot; triggered-event=&quot;mouseover&quot;&gt;
+        &lt;cuf-nav-child-item label=&quot;item-3-1&quot; href=&quot;#page2&quot; has-children=&quot;true&quot;&gt;
+            &lt;cuf-nav-child-item label=&quot;item-3-1-1&quot; href=&quot;#page3&quot;&gt;&lt;/cuf-nav-child-item&gt;
+        &lt;/cuf-nav-child-item&gt;
+        &lt;cuf-nav-child-item label=&quot;item-3-2&quot; href=&quot;#page&quot;&gt;&lt;/cuf-nav-child-item&gt;
+    &lt;/cuf-nav-item&gt;
+&lt;/cuf-nav&gt;
+  </code>
+</pre>  
