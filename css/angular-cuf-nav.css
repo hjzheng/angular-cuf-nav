@@ -1,8 +1,3 @@
-/*fix 15px and 5px round corner*/
-.platform-brand-area, .platform-nav-area  {
-	margin: 0px -20px;
-}
-
 .dropdown-open {
 	background-color: #EEE !important;
 }

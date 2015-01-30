@@ -1,0 +1,5 @@
+/*fix 15px and 5px round corner*/
+.platform-brand-area, .platform-nav-area  {
+    margin: 0px -15px;
+    border-radius: 0;
+}
