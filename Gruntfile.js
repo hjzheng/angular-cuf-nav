@@ -54,6 +54,7 @@ module.exports = function(grunt) {
       all: ['tmp', 'build/*'],
       tmp: ['tmp']
     },
+    //use ngmin for uglify angular bug
     ngmin: {
       main: {
         src: 'tmp/<%= pkg.name %>.all.js',
