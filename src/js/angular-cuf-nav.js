@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('cuf', []).directive('cufNav', function($window){
+angular.module('cuf', ['cuf-nav-template']).directive('cufNav', function($window){
   // Runs during compile
   return {
     scope: {

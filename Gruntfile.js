@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     },
     html2js: {
       options: {
-        module: 'cuf'
+        module: 'cuf-nav-template'
       },
       main: {
         src: ['src/template/*.html'],
@@ -46,13 +46,19 @@ module.exports = function(grunt) {
     },
     concat: {
       main: {
-       src: 'tmp/*.js',
+       src: ['tmp/templates.js', 'tmp/<%= pkg.name %>.js'],
        dest: 'tmp/<%= pkg.name %>.all.js'
       }  
     }, 
     clean: {
       all: ['tmp', 'build/*'],
       tmp: ['tmp']
+    },
+    ngmin: {
+      main: {
+        src: 'tmp/<%= pkg.name %>.all.js',
+        dest: 'tmp/<%= pkg.name %>.all.js'
+      }
     }
   });
 
@@ -61,6 +67,6 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-cssmin');
   
   // Default task(s).
-  grunt.registerTask('default', ['clean:all', 'copy:main', 'html2js:main', 'concat:main', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['clean:all', 'copy:main', 'html2js:main', 'concat:main', 'ngmin', 'uglify', 'cssmin']);
 
 };

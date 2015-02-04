@@ -40,8 +40,8 @@ angular.module('test', ['ui.router','ngResource', 'cuf'])
     })
 
 }])
-.service('navConf', ['$resource', function($resource){
-	return $resource("data/navConf.json", {}, {query: {method:'post', isArray:true}});
+.factory('navConf', ['$resource', function($resource){
+	return $resource("data/navConf.json", {}, {query: {method:'GET', isArray:true}});
 }])
 .controller('navCtrl', ['$scope', 'navConf', function($scope, navConf){
     $scope.navData = navConf.query();
