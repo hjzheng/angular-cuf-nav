@@ -1,17 +1,17 @@
 # angular-cuf-nav
 基于angular的导航菜单
 
-[![ScreenShot](https://github.com/hjzheng/angular-cuf-nav/raw/master/img/angular-cuf-nav.png)]
+![ScreenShot](https://github.com/hjzheng/angular-cuf-nav/raw/master/img/angular-cuf-nav.png)
 
 ### Usage
  - Step1: 引入依赖的文件
  ```html
-	 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-	 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-	 <link rel="stylesheet" href="build/css/angular-cuf-nav.min.css">
-	 <script src="bower_components/jquery/jquery.min.js"></script>
-	 <script src="bower_components/angular/angular.min.js"></script>
-	 <script src="build/js/angular-cuf-nav.min.js"></script>
+ <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+ <link rel="stylesheet" href="build/css/angular-cuf-nav.min.css">
+ <script src="bower_components/jquery/jquery.min.js"></script>
+ <script src="bower_components/angular/angular.min.js"></script>
+ <script src="build/js/angular-cuf-nav.min.js"></script>
  ```
  
  - Step2: 配置依赖模块
@@ -21,7 +21,7 @@
  
 ### API
   
-  | 指令    |    描述   |
+  | 指令    |    描述   | 
   | -----  | --------- |  
   | cufNav | 最上层标签 |
   | cufNavItem | cufNav的直接子标签|
@@ -49,11 +49,11 @@ cufNavChildItem
 |has-children	|字符串,任意字符串,表示真|	如果cufNavChildItem下需要嵌套cufNavChildItem标签，就必须配置该属性，反之不要配|
 
 ### Example
-- [Example1][http://get-set.cn/cuf-nav/#/example1]
-- [Example2][http://get-set.cn/cuf-nav/#/example2]
-- [Example3][http://get-set.cn/cuf-nav/#/example3]
-- [Example4][http://get-set.cn/cuf-nav/#/example4]
-- [Example5][http://get-set.cn/cuf-nav/#/example5]
+- [Example1](http://get-set.cn/cuf-nav/#/example1)
+- [Example2](http://get-set.cn/cuf-nav/#/example2)
+- [Example3](http://get-set.cn/cuf-nav/#/example3)
+- [Example4](http://get-set.cn/cuf-nav/#/example4)
+- [Example5](http://get-set.cn/cuf-nav/#/example5)
 
 ### More
  - git clone https://github.com/hjzheng/angular-cuf-nav
