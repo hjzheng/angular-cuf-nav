@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('test', ['ui.router','ngResource', 'cuf'])
+angular.module('test', ['ui.router','ngResource', 'cuf.nav'])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/example1");

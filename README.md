@@ -17,7 +17,7 @@
  
 - Step2: 配置依赖模块
 ```javascript
-angular.module('test', ['cuf']);
+angular.module('test', ['cuf.nav']);
 ```
  
 ### API
