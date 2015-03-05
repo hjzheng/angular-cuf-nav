@@ -1,5 +1,5 @@
 # angular-cuf-nav
-基于angular的导航菜单
+基于angular的导航菜单 http://get-set.cn/cuf-nav
 
 ![ScreenShot](https://github.com/hjzheng/angular-cuf-nav/raw/master/img/angular-cuf-nav.png)
 
