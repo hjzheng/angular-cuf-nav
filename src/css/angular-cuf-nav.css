@@ -1,3 +1,6 @@
+.link {
+    cursor: pointer;    
+}
 .dropdown-open {
 	background-color: #EEE !important;
 }

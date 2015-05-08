@@ -1,6 +1,6 @@
 <li class="dropdown">
 	<a ng-if="!hasChildren" class="dropdown-toggle" href="{{href}}" ng-click="clickToggle()" ng-mouseover="mouseOver()">{{label}}</a>
-	<a ng-if="hasChildren" class="dropdown-toggle" ng-class="{'dropdown-open': show}" ng-click="clickToggle()" ng-mouseover="mouseOver()">{{label}} <span class="caret"></span></a>
+	<a ng-if="hasChildren" class="dropdown-toggle link" ng-class="{'dropdown-open': show}" ng-click="clickToggle()" ng-mouseover="mouseOver()">{{label}} <span class="caret"></span></a>
 	<ul role="menu" ng-if="hasChildren" ng-class="{'dropdown-menu': hasChildren, 'dropdown-menu-show': show}" ng-transclude>
 	<ul>
 </li>
