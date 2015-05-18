@@ -9,21 +9,18 @@
 </div>
 
 <h2>Code</h2>
-<pre>
-  <code ng-non-bindable>
-&lt;cuf-nav triggered-event=&quot;click&quot;&gt;
+<pre class="prettyprint linenums">
+<code ng-non-bindable>&lt;cuf-nav triggered-event=&quot;click&quot;&gt;
     &lt;cuf-nav-item ng-repeat=&quot;item in navData&quot; href=&quot;{{item.href}}&quot; label=&quot;{{item.name}}&quot; 
                        has-children=&quot;{{item.children &amp;&amp; item.children.length !== 0}}&quot;&gt;
             &lt;cuf-nav-child-item ng-repeat=&quot;itemChild in item.children&quot; href=&quot;{{itemChild.href}}&quot; label=&quot;{{itemChild.name}}&quot;&gt;&lt;/cuf-nav-child-item&gt;
     &lt;/cuf-nav-item&gt;
-&lt;/cuf-nav&gt;
-  </code>
+&lt;/cuf-nav&gt;</code>
 </pre>  
 
 <h2>JSON 数据</h2>
-<pre>
-	<code class="json">
-[{
+<pre class="prettyprint linenums">
+<code class="json">[{
     "name": "first-1",
     "href": "#page1"
 }, {
@@ -59,6 +56,12 @@
         "name": "second-6",
         "href": "#"
     }]
-}]		
-	</code>
+}]</code>
 </pre>
+<script type="text/javascript">
+    !function ($) {
+        $(function(){
+            window.prettyPrint && prettyPrint()
+        })
+    }(window.jQuery)
+</script>
