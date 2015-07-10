@@ -52,11 +52,11 @@ angular.module('test', ['cuf.nav']);
 |has-children	|字符串,任意字符串,表示真|	如果cufNavChildItem下需要嵌套cufNavChildItem标签，就必须配置该属性，反之不要配|
 
 ### Example
-- [Example1](http://get-set.cn/cuf-nav/#/example1)
-- [Example2](http://get-set.cn/cuf-nav/#/example2)
-- [Example3](http://get-set.cn/cuf-nav/#/example3)
-- [Example4](http://get-set.cn/cuf-nav/#/example4)
-- [Example5](http://get-set.cn/cuf-nav/#/example5)
+- [Example1](http://get-set.cn/angular-cuf-nav/#/example1)
+- [Example2](http://get-set.cn/angular-cuf-nav/#/example2)
+- [Example3](http://get-set.cn/angular-cuf-nav/#/example3)
+- [Example4](http://get-set.cn/angular-cuf-nav/#/example4)
+- [Example5](http://get-set.cn/angular-cuf-nav/#/example5)
 
 ### More
  - git clone https://github.com/hjzheng/angular-cuf-nav
