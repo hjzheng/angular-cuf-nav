@@ -46,7 +46,8 @@ angular.module('test', ['ui.router','ngResource', 'cuf.nav'])
 .controller('navCtrl', ['$scope', 'navConf', function($scope, navConf){
     $scope.navData = navConf.query();
 
-    $scope.itemClick = function(label){
-      console.log("click tree item: " + label);
+    $scope.itemClick = function(labelName){
+      console.log("arguments: " + arguments);
+      console.log("click tree item: " + labelName);
     }
 }]);

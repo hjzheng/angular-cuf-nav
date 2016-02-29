@@ -89,7 +89,7 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
       href: '@',
       triggeredEvent: '@',
       isChildren: '@hasChildren',
-      itemClick: '&'
+      itemClick: '&' // pass function with parameter
     },
     restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
     templateUrl: 'template/cufNavItem.html',
@@ -162,6 +162,7 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
     controllerAs: 'cufNavItem',
     controller: function($scope, $element, $attrs, $transclude){
       $scope.hasChildren = ($scope.isChildren === 'true');
+      
       $scope.navClick = function($event){
           $scope.itemClick();
           $event.stopPropagation();
