@@ -1,4 +1,4 @@
-<li ng-class="{'dropdown-submenu': hasChildren}">
+<li ng-class="{'dropdown-submenu': hasChildren}" ng-click="navClick($event)">
 	<a ng-if="!hasChildren" href="{{href}}" class="dropdown-toggle" ng-click="clickToggle()" ng-mouseover="mouseOver()">{{ label }}</a>
 	<a ng-if="hasChildren" class="dropdown-toggle link" ng-class="{'dropdown-open': show}" ng-click="clickToggle()" ng-mouseover="mouseOver()">{{ label }}</a>
 	<ul ng-if="hasChildren" role="menu" ng-class="{'dropdown-menu': hasChildren, 'dropdown-menu-show': show}" ng-transclude>

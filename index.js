@@ -6,7 +6,7 @@
 angular.module('test', ['ui.router','ngResource', 'cuf.nav'])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise("/example1");
+  //$urlRouterProvider.otherwise("/example1");
 
   $stateProvider
     .state('/example1', {
@@ -45,4 +45,8 @@ angular.module('test', ['ui.router','ngResource', 'cuf.nav'])
 }])
 .controller('navCtrl', ['$scope', 'navConf', function($scope, navConf){
     $scope.navData = navConf.query();
+
+    $scope.itemClick = function(label){
+      console.log("click tree item: " + label);
+    }
 }]);

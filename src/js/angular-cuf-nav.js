@@ -88,7 +88,8 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
       label: '@',
       href: '@',
       triggeredEvent: '@',
-      hasChildren: '@'
+      isChildren: '@hasChildren',
+      itemClick: '&'
     },
     restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
     templateUrl: 'template/cufNavItem.html',
@@ -96,6 +97,8 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
     transclude: true,
     controllerAs: 'cufNavItem',
     controller: function($scope, $element, $attrs, $transclude){
+
+        $scope.hasChildren = ($scope.isChildren === 'true');
 
         if(!$scope.triggeredEvent){
           this.triggeredEvent = $scope.$parent.$parent.triggeredEvent;
@@ -116,6 +119,11 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
                   it.show = false;
                 }
             });
+        };
+
+        $scope.navClick = function($event){
+          $scope.itemClick();
+          $event.stopPropagation();
         };
     },
     link: function($scope, iElm, iAttrs, cufNavCtrl) {
@@ -144,7 +152,8 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
     scope: {
       label: '@',
       href: '@',
-      hasChildren: '@'
+      isChildren: '@hasChildren',
+      itemClick: '&'
     },
     restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
     templateUrl: 'template/cufNavChildItem.html',
@@ -152,7 +161,11 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
     transclude: true,
     controllerAs: 'cufNavItem',
     controller: function($scope, $element, $attrs, $transclude){
-
+      $scope.hasChildren = ($scope.isChildren === 'true');
+      $scope.navClick = function($event){
+          $scope.itemClick();
+          $event.stopPropagation();
+      };
     },
     link: function($scope, iElm, iAttrs, cufNavItem) {
 
@@ -166,7 +179,7 @@ angular.module('cuf.nav', ['cuf-nav-template']).directive('cufNav', function($wi
 
       $scope.clickToggle = function(){
           if(cufNavItem.triggeredEvent === 'click') {
-             cufNavItem.closeOtherChildItems($scope.parentLabel, $scope);
+            cufNavItem.closeOtherChildItems($scope.parentLabel, $scope);
             $scope.show = ($scope.show == true ? false: true); 
           }
       }

@@ -1,18 +1,18 @@
 [{
     "name": "first-1",
-    "href": "#page1"
+    "href": "#"
 }, {
     "name": "first-2",
-    "href": "#page2"
+    "href": "#"
 }, {
     "name": "first-3",
     "href": "#",
     "children": [{
         "name": "second-1",
-        "href": "#page1"
+        "href": "#"
     }, {
         "name": "second-2",
-        "href": "#page2"
+        "href": "#"
     }, {
         "name": "second-3",
         "href": "#"

@@ -2,8 +2,8 @@
 <div class="nav">
 	<cuf-nav triggered-event="click">
 	    <cuf-nav-item ng-repeat="item in navData" href="{{item.href}}" label="{{item.name}}" 
-	                       has-children="{{item.children && item.children.length !== 0}}">
-				<cuf-nav-child-item ng-repeat="itemChild in item.children" href="{{itemChild.href}}" label="{{itemChild.name}}"></cuf-nav-child-item>
+	                       has-children="{{item.children && item.children.length !== 0}}" item-click="itemClick(item.name);">
+				<cuf-nav-child-item ng-repeat="itemChild in item.children" href="{{itemChild.href}}" label="{{itemChild.name}}" item-click="itemClick(itemChild.name);"></cuf-nav-child-item>
 	    </cuf-nav-item>
 	</cuf-nav>
 </div>
@@ -22,19 +22,19 @@
 <pre class="prettyprint linenums">
 <code class="json">[{
     "name": "first-1",
-    "href": "#page1"
+    "href": "#"
 }, {
     "name": "first-2",
-    "href": "#page2"
+    "href": "#"
 }, {
     "name": "first-3",
     "href": "#",
     "children": [{
         "name": "second-1",
-        "href": "#page1"
+        "href": "#"
     }, {
         "name": "second-2",
-        "href": "#page2"
+        "href": "#"
     }, {
         "name": "second-3",
         "href": "#"
